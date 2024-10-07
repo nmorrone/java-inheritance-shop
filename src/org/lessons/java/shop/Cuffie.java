@@ -40,4 +40,12 @@ public class Cuffie extends Prodotto{
 	public boolean getCablate() {
 		return this.cablate;
 	}
+	
+	public String toStringCuffie() {
+		
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Colore: %s Wireless: %s Cablate: %sPrezzo (IVA incl.): €%s",
+				getNome(), getCodice(), getDescrizione(),getColore(), getWireless(), getCablate(), getPrezzoIvato());
+		
+	}
+	
 }

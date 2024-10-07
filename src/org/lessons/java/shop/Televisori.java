@@ -50,6 +50,13 @@ public class Televisori extends Prodotto{
 	return this.smart;
 
 	}
+
+	public String toStringSmart() {
+		
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Altezza: %s Larghezza: %s Profondità: %s(IVA incl.): €%s",
+				getNome(), getCodice(), getDescrizione(),getAltezza(), getLarghezza(), getProfondita() getPrezzoIvato());
+		
+	}
 	
 }
 

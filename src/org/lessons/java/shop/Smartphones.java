@@ -31,6 +31,13 @@ public class Smartphones extends Prodotto{
 	public String getImei() {
 		return this.codiceImei;
 	}
+	
+	public String toStringSmart() {
+		
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Codice IMEI: %s Memoria (gb): %s(IVA incl.): €%s",
+				getNome(), getCodice(), getDescrizione(),getImei(), getMemoria(), getPrezzoIvato());
+		
+	}
 }
 
 
