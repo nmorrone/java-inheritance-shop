@@ -3,7 +3,7 @@ package org.lessons.java.shop;
 public class Smartphones extends Prodotto{
 
 	private String codiceImei;
-	int memoria;
+	private int memoria;
 	
 	
 	public Smartphones(String nome, String descrizione, double prezzo){
@@ -15,6 +15,8 @@ public class Smartphones extends Prodotto{
 		setMemoria(memoria);
 		
 	}
+	
+	//apro metodi getter e setter
 	
 	public void setMemoria(int memoria) {
 		this.memoria = memoria;
@@ -32,9 +34,11 @@ public class Smartphones extends Prodotto{
 		return this.codiceImei;
 	}
 	
+	
+	//metodo toString
 	public String toStringSmart() {
 		
-		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Codice IMEI: %s Memoria (gb): %s(IVA incl.): €%s",
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Codice IMEI: %s Memoria (gb): %s Prezzo(IVA incl.): €%s",
 				getNome(), getCodice(), getDescrizione(),getImei(), getMemoria(), getPrezzoIvato());
 		
 	}

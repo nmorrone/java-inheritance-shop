@@ -15,11 +15,13 @@ public class Televisori extends Prodotto{
 		setLarghezza(larghezza);
 		setAltezza(altezza);
 		setProfondita(profondita);
-		setSmart();
+		setSmart(smart);
 		setCodice();
 		setIva();
 		
 	}
+	
+	//apro metodi getter e setter
 	
 	public void setAltezza(int a) {
 		this.altezza = a;
@@ -45,16 +47,18 @@ public class Televisori extends Prodotto{
 		return this.profondita;
 	}
 	
-	public boolean setSmart(){
+	public void setSmart(boolean a){
+	this.smart = a;
+	}
 	
-	return this.smart;
-
+	public boolean getSmart() {
+		return this.smart;
 	}
 
-	public String toStringSmart() {
-		
-		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Altezza: %s Larghezza: %s Profondità: %s(IVA incl.): €%s",
-				getNome(), getCodice(), getDescrizione(),getAltezza(), getLarghezza(), getProfondita() getPrezzoIvato());
+	//metodo toString
+	public String toStringTv() {
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Altezza: %s Larghezza: %s,  Profondità: %s, SmartTV: %s Prezzo(IVA incl.): €%s",
+				getNome(), getCodice(), getDescrizione(),getAltezza(), getLarghezza(), getProfondita(), getSmart(), getPrezzoIvato());
 		
 	}
 	

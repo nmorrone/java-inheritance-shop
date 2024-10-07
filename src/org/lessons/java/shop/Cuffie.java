@@ -16,6 +16,8 @@ public class Cuffie extends Prodotto{
 		setCablate(cablate);
 
 	}
+	
+	//apro metodi getter e setter
 
 	public void setColore(String colore) {
 		this.colore = colore;
@@ -41,9 +43,11 @@ public class Cuffie extends Prodotto{
 		return this.cablate;
 	}
 	
+	
+	//metodo to string
 	public String toStringCuffie() {
 		
-		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Colore: %s Wireless: %s Cablate: %sPrezzo (IVA incl.): €%s",
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Colore: %s Wireless: %s Cablate: %s Prezzo (IVA incl.): €%s",
 				getNome(), getCodice(), getDescrizione(),getColore(), getWireless(), getCablate(), getPrezzoIvato());
 		
 	}

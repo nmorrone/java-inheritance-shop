@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Prodotto {
 	private int codice;
-	protected String nome;
-	protected String descrizione;
+	private String nome;
+	private String descrizione;
 	private double prezzo;
-	protected double iva;
+	private double iva;
 	
 	Prodotto(){
 		
@@ -71,9 +71,11 @@ public class Prodotto {
 		return String.format("%.2f", (this.prezzo + this.iva));
 	}
 	
+	//metodo toString
+	
 	public String toString() {
 		
-		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Prezzo (IVA incl.): â‚¬%s", getNome(), getCodice(), getDescrizione(), getPrezzoIvato());
+		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Prezzo (IVA incl.): €%s", getNome(), getCodice(), getDescrizione(), getPrezzoIvato());
 		
 	}
 	
