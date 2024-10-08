@@ -45,7 +45,8 @@ public class Cuffie extends Prodotto{
 	
 	
 	//metodo to string
-	public String toStringCuffie() {
+	//override
+	public String toString() {
 		
 		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Colore: %s Wireless: %s Cablate: %s Prezzo (IVA incl.): €%s",
 				getNome(), getCodice(), getDescrizione(),getColore(), getWireless(), getCablate(), getPrezzoIvato());

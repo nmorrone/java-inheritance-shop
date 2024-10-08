@@ -36,7 +36,7 @@ public class Smartphones extends Prodotto{
 	
 	
 	//metodo toString
-	public String toStringSmart() {
+	public String toString() {
 		
 		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Codice IMEI: %s Memoria (gb): %s Prezzo(IVA incl.): €%s",
 				getNome(), getCodice(), getDescrizione(),getImei(), getMemoria(), getPrezzoIvato());

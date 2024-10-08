@@ -56,7 +56,7 @@ public class Televisori extends Prodotto{
 	}
 
 	//metodo toString
-	public String toStringTv() {
+	public String toString() {
 		return String.format("Prodotto: %s Codice Prodotto: %s Descrizione: %s Altezza: %s Larghezza: %s,  Profondità: %s, SmartTV: %s Prezzo(IVA incl.): €%s",
 				getNome(), getCodice(), getDescrizione(),getAltezza(), getLarghezza(), getProfondita(), getSmart(), getPrezzoIvato());
 		

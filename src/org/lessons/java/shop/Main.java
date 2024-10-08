@@ -13,22 +13,22 @@ public static void main(String[]args) {
 	
 	System.out.println(prodotto1.toString());
 	
-	Cuffie airpods = new Cuffie("airpods", "cuffie professionali wireless", 349.00);
+	Cuffie airpods = new Cuffie("airpods", "cuffie professionali di ultima generazione", 349.00);
 	airpods.setWireless(true);
 	airpods.setColore("Bianco");
-	System.out.println(airpods.toStringCuffie());
+	System.out.println(airpods.toString());
 	
 	Televisori televisore = new Televisori("Samsung Smart TV","Nuova televisione di ultima generazione", 699.00);
 	televisore.setLarghezza(135);
 	televisore.setAltezza(80);
 	televisore.setProfondita(5);
 	televisore.setSmart(true);
-	System.out.println(televisore.toStringTv());
+	System.out.println(televisore.toString());
 	
 	Smartphones smartphone = new Smartphones("iPhone 13 Pro", "Con nuova fotocamera grandangolare e intelligenza AI", 1199.00);
 	smartphone.setImei("049922294271648930");
 	smartphone.setMemoria(5120);
-	System.out.println(smartphone.toStringSmart())
+	System.out.println(smartphone.toString())
 ;	
 }
 
