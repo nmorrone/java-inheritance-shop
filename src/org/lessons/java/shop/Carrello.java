@@ -9,16 +9,23 @@ public class Carrello extends Prodotto{
 
 	public Prodotto [] prodotti;
 
-	Carrello(String nomeCarrello, int m) {
+	Carrello(String nomeCarrello, int numeroProdotti) {
 		
 		this.nomeCarrello = nomeCarrello;
-		prodotti = new Prodotto[m];
+		prodotti = new Prodotto[numeroProdotti];
 	}
 	
-	public void setProdotto(Prodotto s, int m) {
-		prodotti[m] = s;
+	public void setProdotto(Prodotto s, int numeroProdotti) {
+		prodotti[numeroProdotti] = s;
 	}
-	// inizializzazione del carrello
+	
+	//metodo stampa carrello
+	public void stampaCarrello() {
+		System.out.println(nomeCarrello);
+		for(int i = 0; i < prodotti.length; i++){
+			System.out.println(prodotti[i].toString() + "\n");
+		}
+	}
 
 	public static void main(String[] args) {
 
@@ -41,9 +48,9 @@ public class Carrello extends Prodotto{
 				int posizione = i;
 				System.out.println("Inserisci nome smartphone nome, descrizione e prezzo");
 				String a = input.nextLine();
-				//System.out.println("Inserisci descrizione");
-				String b = input.nextLine();
-				//System.out.println("Inserisci prezzo");
+				//risolvo buffer nextline salta chiamata
+				input.nextLine();
+				String b = input.nextLine();;
 				double c = input.nextDouble();
 				Smartphones smartphone = new Smartphones(a, b, c);
 				// String nomeProdotto = "Prodotto" + String.valueOf(i);
@@ -55,6 +62,8 @@ public class Carrello extends Prodotto{
 				int posizione = i;
 				System.out.println("Inserisci nome cuffie, descrizione e prezzo \n (valida con invio ogni campo");
 				String a = input.nextLine();
+				//risolvo buffer nextline salta chiamata
+				input.nextLine();
 				String b = input.nextLine();
 				double c = input.nextDouble();
 				Cuffie cuffie = new Cuffie(a, b, c);
@@ -66,6 +75,8 @@ public class Carrello extends Prodotto{
 				int posizione = i;
 				System.out.println("Inserisci nome televisore, descrizione e prezzo \n (valida con invio ogni campo");
 				String a = input.nextLine();
+				//risolvo buffer nextline salta chiamata
+				input.nextLine();
 				String b = input.nextLine();
 				double c = input.nextDouble();
 				Televisori televisore = new Televisori(a, b, c);
@@ -77,42 +88,9 @@ public class Carrello extends Prodotto{
 				System.out.println("il numero inserito non è associato a nessuna scelta");
 				i = 0;
 			}
-			/*switch (scelta) {
-			case 1: {
-				int posizione = i;
-				Smartphones smartphone = new Smartphones();
-				System.out.println("Inserisci nome smartphone, descrizione e prezzo \n (valida con invio ogni campo");
-				smartphone.setNome(input.nextLine());
-				smartphone.setDescrizione(input.nextLine());
-				smartphone.setPrezzo(input.nextDouble());
-				// String nomeProdotto = "Prodotto" + String.valueOf(i);
-				carrello1.setProdotto(smartphone, posizione);
-			}
-			case 2: {
-				int posizione = i;
-				System.out.println("Inserisci nome cuffie, descrizione e prezzo \n (valida con invio ogni campo");
-				String a = input.nextLine();
-				String b = input.nextLine();
-				double c = input.nextDouble();
-				// String nomeProdotto = "Prodotto" + String.valueOf(i);
-				Cuffie cuffie = new Cuffie(a, b, c);
-				carrello1.setProdotto(cuffie, posizione);
-				break;
-			}
-			case 3: {
-				int posizione = i;
-				System.out.println("Inserisci nome cuffie, descrizione e prezzo \n (valida con invio ogni campo");
-				String a = input.nextLine();
-				String b = input.nextLine();
-				double c = input.nextDouble();
-				// String nomeProdotto = "Prodotto" + String.valueOf(i);
-				Televisori televisore = new Televisori(a, b, c);
-				carrello1.setProdotto(televisore, posizione);
-				break;
-			} 
-
-			}*/
 
 		} 
+		
+		carrello1.stampaCarrello();
 	}
 }
