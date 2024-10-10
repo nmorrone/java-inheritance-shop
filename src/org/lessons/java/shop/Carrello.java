@@ -2,14 +2,16 @@ package org.lessons.java.shop;
 
 import java.util.Scanner;
 
-import org.lessons.java.snacks1.Studente2;
 
-public class Carrello extends Prodotto {
+public class Carrello extends Prodotto{
+	
+	private String nomeCarrello;
 
 	public Prodotto [] prodotti;
 
-	Carrello(int m) {
-
+	Carrello(String nomeCarrello, int m) {
+		
+		this.nomeCarrello = nomeCarrello;
 		prodotti = new Prodotto[m];
 	}
 	
@@ -20,29 +22,40 @@ public class Carrello extends Prodotto {
 
 	public static void main(String[] args) {
 
-		System.out.println("Benvenuto nell'inizializzazione del Carrelo \nCominciamo ad inserire i prodotti");
+		System.out.println("Benvenuto inserisci il nome del carrello \n");
 
 		Scanner input = new Scanner(System.in);
-
+		String nomeCarrello = input.nextLine();
 		System.out.println("Quanti prodotti vuoi inserire?");
 		int m = input.nextInt();
+		
+		Carrello carrello1 = new Carrello(nomeCarrello, m);
+;
 
-		Carrello carrello1 = new Carrello(m);
-
-		for (int i = 0; i < m; i++) {
+		for (int i = 0; i < carrello1.prodotti.length; i++) {
 			System.out.println("Che tipo di prodotto vuoi inserire? \n 1 per Smartphone, 2 per Cuffie, 3 per Televisori");
 			int scelta = input.nextInt();
-			switch (scelta) {
-			case 1: {
+			
+			if (scelta == 1) {
 				int posizione = i;
 				System.out.println("Inserisci nome smartphone, descrizione e prezzo \n (valida con invio ogni campo");
 				String a = input.nextLine();
 				String b = input.nextLine();
 				double c = input.nextDouble();
-				// String nomeProdotto = "Prodotto" + String.valueOf(i);
 				Smartphones smartphone = new Smartphones(a, b, c);
+				// String nomeProdotto = "Prodotto" + String.valueOf(i);
 				carrello1.setProdotto(smartphone, posizione);
-				break;
+			}
+			/*switch (scelta) {
+			case 1: {
+				int posizione = i;
+				Smartphones smartphone = new Smartphones();
+				System.out.println("Inserisci nome smartphone, descrizione e prezzo \n (valida con invio ogni campo");
+				smartphone.setNome(input.nextLine());
+				smartphone.setDescrizione(input.nextLine());
+				smartphone.setPrezzo(input.nextDouble());
+				// String nomeProdotto = "Prodotto" + String.valueOf(i);
+				carrello1.setProdotto(smartphone, posizione);
 			}
 			case 2: {
 				int posizione = i;
@@ -65,9 +78,9 @@ public class Carrello extends Prodotto {
 				Televisori televisore = new Televisori(a, b, c);
 				carrello1.setProdotto(televisore, posizione);
 				break;
-			}
+			} 
 
-			}
+			}*/
 
 		} 
 	}
