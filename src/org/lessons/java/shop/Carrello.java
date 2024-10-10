@@ -15,11 +15,12 @@ public class Carrello extends Prodotto{
 		prodotti = new Prodotto[numeroProdotti];
 	}
 	
+	//metodo assegnamento posizione del prodotto nel carrello/array prodotti
 	public void setProdotto(Prodotto s, int numeroProdotti) {
 		prodotti[numeroProdotti] = s;
 	}
 	
-	//metodo stampa carrello
+	//metodo stampa tutti i prodotti del carrello
 	public void stampaCarrello() {
 		System.out.println(nomeCarrello);
 		for(int i = 0; i < prodotti.length; i++){
