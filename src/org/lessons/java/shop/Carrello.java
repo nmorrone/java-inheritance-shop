@@ -46,6 +46,32 @@ public class Carrello extends Prodotto{
 				// String nomeProdotto = "Prodotto" + String.valueOf(i);
 				carrello1.setProdotto(smartphone, posizione);
 			}
+			
+			else if (scelta == 2) {
+				int posizione = i;
+				System.out.println("Inserisci nome cuffie, descrizione e prezzo \n (valida con invio ogni campo");
+				String a = input.nextLine();
+				String b = input.nextLine();
+				double c = input.nextDouble();
+				Cuffie cuffie = new Cuffie(a, b, c);
+				// String nomeProdotto = "Prodotto" + String.valueOf(i);
+				carrello1.setProdotto(cuffie, posizione);
+			}
+			
+			else if (scelta == 3) {
+				int posizione = i;
+				System.out.println("Inserisci nome televisore, descrizione e prezzo \n (valida con invio ogni campo");
+				String a = input.nextLine();
+				String b = input.nextLine();
+				double c = input.nextDouble();
+				Televisori televisore = new Televisori(a, b, c);
+				// String nomeProdotto = "Prodotto" + String.valueOf(i);
+				carrello1.setProdotto(televisore, posizione);
+			}
+			
+			else {
+				System.out.println("il numero inserito non è associato a nessuna scelta");
+			}
 			/*switch (scelta) {
 			case 1: {
 				int posizione = i;
