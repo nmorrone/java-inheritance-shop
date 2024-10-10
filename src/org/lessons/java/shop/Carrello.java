@@ -30,11 +30,10 @@ public class Carrello extends Prodotto{
 
 	public static void main(String[] args) {
 
-		System.out.println("Benvenuto inserisci il nome del carrello \n");
-
+		System.out.println("Benvenuto inserisci il nome del carrello");
 		Scanner input = new Scanner(System.in);
 		String nomeCarrello = input.nextLine();
-		System.out.println("Quanti prodotti vuoi inserire?");
+		System.out.println("Quanti prodotti vuoi inserire nel Carrello?");
 		int m = input.nextInt();
 	
 		
@@ -56,7 +55,6 @@ public class Carrello extends Prodotto{
 				Smartphones smartphone = new Smartphones(a, b, c);
 				// String nomeProdotto = "Prodotto" + String.valueOf(i);
 				carrello1.setProdotto(smartphone, posizione);
-				System.out.println(smartphone.toString());
 			}
 			
 			else if (scelta == 2) {
